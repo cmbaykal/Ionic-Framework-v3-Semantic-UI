@@ -1,4 +1,27 @@
-## Ionic Framework v3 with Semantic UI
+## Ionic Framework v3 with Semantic UI based on   <a href="https://github.com/edcarroll/ng2-semantic-ui/">ng2-semantic-ui</a>
+
+This repository provide you to use Semantic UI locally in your Ionic Framework projects.
+
+## Installation 
+<p>To install this library, run:</p>
+<demo-codeblock language="bash" _nghost-c7="">
+<pre>npm <span class="token function">install</span> ng2-semantic-ui --save</pre>
+</demo-codeblock>
+<p>Copy "semanticui" folder to your projects assets folder</p>    
+<p>Next include the Semantic UI CSS file in your <code>variables.scss</code></p>
+<p>Finally you need to import the main module:</p>
+<demo-codeblock  language="typescript">
+<pre><span>import</span> <span>{</span>SuiModule<span>}</span> from <span>'ng2-semantic-ui'</span><span>;</span>
+
+@<span>NgModule</span><span>(</span><span>{</span>
+    declarations<span>:</span> <span>[</span>AppComponent<span>,</span> <span>.</span><span>.</span><span>.</span><span>]</span><span>,</span>
+    imports<span>:</span> <span>[</span>SuiModule<span>,</span> <span >.</span><span>.</span><span>.</span><span>]</span><span>,</span>  
+    bootstrap<span>:</span> <span >[</span>AppComponent<span>]</span>
+<span>}</span><span>)</span>
+<span>export</span> <span>class</span> <span>AppModule</span> <span>{</span><span>}</span>
+</pre>
+</demo-codeblock>
+
 
 ## Component Support
 
