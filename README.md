@@ -24,7 +24,7 @@ This repository provide you to use Semantic UI locally in your Ionic Framework p
 
 ## Notes
 
-In the transition modules some animations don't work properly.("jiggle", "flash", "shake", "pulse", "tada", "bounce" )
+In the transition modules some animations don't work properly.("jiggle", "flash", "shake", "pulse", "tada", "bounce")
 
 
 ## Component Support
