@@ -1,4 +1,4 @@
-## Ionic Framework v3 with Semantic UI based on   <a href="https://github.com/edcarroll/ng2-semantic-ui/">ng2-semantic-ui</a>
+## Ionic Framework v3 with Semantic UI based on   <a href="https://edcarroll.github.io/ng2-semantic-ui/">ng2-semantic-ui</a>
 
 This repository provide you to use Semantic UI locally in your Ionic Framework projects.
 
