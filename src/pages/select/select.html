@@ -1,0 +1,150 @@
+<!--
+  Generated template for the SelectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>select</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="ui segments">
+        <div class="ui segment">
+            <p>Single Select (with <code>selection</code> class applied)</p>
+            <sui-select class="selection"
+                        [(ngModel)]="selectedOption"
+                        [options]="options"
+                        labelField="name"
+                        [isSearchable]="searchable"
+                        [isDisabled]="disabled"
+                        #select>
+                <sui-select-option *ngFor="let option of select.filteredOptions"
+                                   [value]="option">
+                </sui-select-option>
+            </sui-select>
+        </div>
+        <div class="ui segment">
+            <p>Multi Select (with <code>selection</code> class applied)</p>
+            <sui-multi-select class="selection"
+                              [(ngModel)]="selectedOptions"
+                              [options]="options"
+                              labelField="name"
+                              [isSearchable]="searchable"
+                              [isDisabled]="disabled"
+                              [hasLabels]="!hideLabels"
+                              #multiSelect>
+                <sui-select-option *ngFor="let option of multiSelect.filteredOptions"
+                                   [value]="option">
+                </sui-select-option>
+            </sui-multi-select>
+            <br><br>
+            <sui-checkbox [(ngModel)]="hideLabels">Hide labels?</sui-checkbox>
+        </div>
+        <div class="ui segment">
+            <sui-checkbox [(ngModel)]="searchable">Searchable?</sui-checkbox>
+            <br>
+            <sui-checkbox [(ngModel)]="disabled">Disabled?</sui-checkbox>
+            
+        </div>
+        <div class="ui segment">
+            <p>Singly selected: {{ selectedOption | json }}</p>
+            <p>Multi selected: {{ selectedOptions | json }}</p>
+        </div>
+    </div>
+    <div class="ui segments">
+        <div class="ui segment">
+            <p><strong>Basic</strong></p>
+            <sui-select placeholder="Choose">
+                <sui-select-option value="Option 1"></sui-select-option>
+                <sui-select-option value="Option 2"></sui-select-option>
+                <sui-select-option value="Option 3"></sui-select-option>
+                <sui-select-option value="Option 4"></sui-select-option>
+            </sui-select>
+        </div>
+        <div class="ui segment">
+            <p><strong>Inline</strong></p>
+            <h4 class="ui header">
+                <i class="trophy icon"></i>
+                <div class="content">
+                    Trending repos
+                    <sui-select class="inline" [(ngModel)]="selectedRange">
+                        <div class="header">Adjust time span</div>
+                        <sui-select-option value="today"></sui-select-option>
+                        <sui-select-option value="this week"></sui-select-option>
+                        <sui-select-option value="this month"></sui-select-option>
+                    </sui-select>
+                </div>
+            </h4>
+        </div>
+        <div class="ui segment">
+            <p><strong>Button</strong></p>
+            <sui-select class="floating labeled icon button"
+                        icon="filter"
+                        [options]="filters"
+                        [isSearchable]="true"
+                        placeholder="Select Filter"
+                        #filterSelect>
+                <div class="header">
+                    <i class="tags icon"></i>
+                    Filter by tag
+                </div>
+                <sui-select-option *ngFor="let o of filterSelect.filteredOptions" [value]="o"></sui-select-option>
+            </sui-select>
+        </div>
+    </div>
+
+    <sui-multi-select [(ngModel)]="selected"
+                  [options]="options"
+                  labelField="name"
+                  [maxSelected]="5"
+                  icon="list"
+                  #select>
+    <div class="ui icon search input">
+        <i class="search icon"></i>
+        <input suiSelectSearch type="text" placeholder="Search options...">
+    </div>
+    <div class="divider"></div>
+    <div class="header">
+        <i class="list icon"></i>
+        Options
+    </div>
+    <div class="scrolling menu">
+        <sui-select-option *ngFor="let o of select.filteredOptions" [value]="o"></sui-select-option>
+    </div>
+</sui-multi-select>
+
+<div class="ui segments">
+    <div class="ui segment">
+        <ng-template let-option #optionTemplate>
+            <i class="child icon"></i>{{ option.name }}
+        </ng-template>
+        <p><strong>Template</strong></p>
+        <p>Note: You must still provide a <code>labelField</code> to support searching.</p>
+        <sui-select class="selection"
+                    [(ngModel)]="selectedOption"
+                    [options]="options"
+                    labelField="name"
+                    [optionTemplate]="optionTemplate"
+                    [isSearchable]="true"
+                    #templated>
+            <sui-select-option *ngFor="let o of templated.filteredOptions" [value]="o"></sui-select-option>
+        </sui-select>
+    </div>
+    <div class="ui segment">
+        <p><strong>Formatter</strong></p>
+        <sui-select class="selection"
+                    [(ngModel)]="selectedOption"
+                    [options]="options"
+                    [optionFormatter]="formatter"
+                    #formatted>
+            <sui-select-option *ngFor="let o of formatted.filteredOptions" [value]="o"></sui-select-option>
+        </sui-select>
+    </div>
+    <div class="ui segment">
+        <p>Selected: {{ selectedOption | json }}</p>
+    </div>
+</div>
+</ion-content>

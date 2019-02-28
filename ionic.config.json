@@ -1,0 +1,7 @@
+{
+  "name": "semanticui",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

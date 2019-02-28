@@ -1,0 +1,79 @@
+<!--
+  Generated template for the CheckboxPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>checkbox</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="ui form">
+        <div class="grouped fields">
+            <label>Checkbox Example</label>
+            <div class="field">
+                <sui-checkbox [(ngModel)]="eCheck" [isDisabled]="eCheckDisabled" [isReadonly]="eCheckReadonly">
+                    An example checkbox
+                </sui-checkbox>
+            </div>
+            <div class="field">
+                <sui-checkbox [(ngModel)]="eCheckDisabled">1st checkbox disabled?</sui-checkbox>
+            </div>
+            <div class="field">
+                <sui-checkbox [(ngModel)]="eCheckReadonly">1st checkbox read-only?</sui-checkbox>
+            </div>
+            <div class="field">
+                <sui-checkbox [(ngModel)]="eCheck">Mirrors value of 1st checkbox</sui-checkbox>
+            </div>
+        </div>
+    </div>
+    <div class="ui form">
+        <div class="grouped fields">
+            <label>Radio Button Example</label>
+            <div class="field">
+                <sui-radio-button name="example" value="hello" [(ngModel)]="eRadio">Value: "hello"</sui-radio-button>
+            </div>
+            <div class="field">
+                <sui-radio-button name="example" value="world" [(ngModel)]="eRadio">Value: "world"</sui-radio-button>
+            </div>
+            <div class="field">
+                <sui-radio-button name="example" value="example" [(ngModel)]="eRadio">Value: "example"</sui-radio-button>
+            </div>
+            <div class="field">
+                <sui-radio-button name="example" [value]="{ example: 'object' }" [(ngModel)]="eRadio">
+                    Value: {{ '{' }} example: "object" }
+                </sui-radio-button>
+            </div>
+        </div>
+    </div>
+    <p>The currently selected value is {{ eRadio | json }}</p>
+    <div class="ui form">
+        <div class="grouped fields">
+            <label>Checkbox Style Examples</label>
+            <div class="field">
+                <sui-checkbox class="slider">Slider checkbox</sui-checkbox>
+            </div>
+            <div class="field">
+                <sui-checkbox class="toggle">Toggle checkbox</sui-checkbox>
+            </div>
+        </div>
+    </div>
+    <div class="ui form">
+        <div class="grouped fields">
+            <label>Radio Button Style Examples</label>
+            <div class="field">
+                <sui-radio-button class="slider" name="styled" value="a" [(ngModel)]="eStyledRadio">
+                    Slider radio button
+                </sui-radio-button>
+            </div>
+            <div class="field">
+                <sui-radio-button class="toggle" name="styled" value="b" [(ngModel)]="eStyledRadio">
+                    Toggle radio button
+                </sui-radio-button>
+            </div>
+        </div>
+    </div>
+</ion-content>

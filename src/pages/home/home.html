@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item >
+      <label>Semantic Ui Button </label><br><br>
+        <button (click)="deneme()" class="ui button">
+            Button Deneme
+          </button> 
+    </ion-item>
+    <ion-item>  
+          <div class="ui labeled button" tabindex="0">
+              <div class="ui red button">
+                <i class="heart icon"></i> Like
+              </div>
+              <a class="ui basic red left pointing label">
+                1,048
+              </a>
+            </div>
+            <div class="ui labeled button" tabindex="0">
+              <div class="ui basic blue button">
+                <i class="fork icon"></i> Forks
+              </div>
+              <a class="ui basic left pointing blue label">
+                1,048
+              </a>
+            </div>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

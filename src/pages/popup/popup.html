@@ -1,0 +1,26 @@
+<!--
+  Generated template for the PopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>popup</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button class="ui green icon button" suiPopup popupHeader="Example" popupText="This is an example popup">
+        <i class="add icon"></i>
+    </button>
+    <ng-template let-popup #popupTemplate>
+        <div class="header">Rating</div>
+        <div class="content">
+            <sui-rating class="star" (click)="popup.close()"></sui-rating>
+        </div>
+    </ng-template>
+    <button class="ui icon button" suiPopup [popupTemplate]="popupTemplate" popupTrigger="outsideClick">
+        <i class="star icon"></i> Rate
+    </button>
+</ion-content>
